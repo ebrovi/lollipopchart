@@ -1,0 +1,182 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Category",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Values",
+            "name": "values",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Target",
+            "name": "target",
+            "kind": "Measure"
+        }
+    ],
+    "privileges": [
+        {
+            "name": "WebAccess"
+        },
+        {
+            "name": "LocalStorage"
+        }
+
+    ],
+    "objects": {
+        "lollipopSettings": {
+            "displayName": "Lollipop Settings",
+            "properties": {
+                "defaultColor": {
+                    "displayName": "Line color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "dataPointColor": {
+                    "displayName": "Data Point Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "radius": {
+                    "displayName": "Radius",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "lineWidth": {
+                    "displayName": "Line Width",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                 "fontSize": {
+                    "displayName": "Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "fontFamily":{
+                    "displayName": "Font Family",
+                    "type": {
+                        "formatting": {
+                            "fontFamily": true
+                        }
+                    }
+                },
+                "fontColor":{
+                    "displayName": "Font Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "gradientEnabled": {
+                    "displayName": "Gradient",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "gradientColor": {
+                    "displayName": "Gradient Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "dataLabelEnabled": {
+                    "displayName": "Data Label",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                 "dataFontSize": {
+                    "displayName": "Data Text Size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "dataFontColor":{
+                    "displayName": "Data Text Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "dataFontFamily":{
+                    "displayName": "Data Text Font Family",
+                    "type": {
+                        "formatting": {
+                            "fontFamily": true
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "values"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "target"
+                            }
+                        }
+                    ]
+                }
+            },
+            "conditions": [
+                {"category": {"max": 1}, "values":{"max": 1}, "target": {"max": 1}}
+            ]
+        }
+    ],
+    "tooltips": {
+        "supportedTypes": {
+            "default": true,
+            "canvas": false
+        },
+        "roles": [
+            "tooltips"
+        ]
+    },
+    "supportsHighlight": true
+}

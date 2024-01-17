@@ -1,0 +1,25 @@
+{
+    "visual": {
+        "name": "lollipopchart",
+        "displayName": "lollipopchart",
+        "guid": "lollipopchartCC53B1F7507A4368961E83CFA461CACF",
+        "visualClassName": "Visual",
+        "version": "1.0.0",
+        "description": "Lollipopchart",
+        "supportUrl": "N/A",
+        "gitHubUrl": ""
+    },
+    "apiVersion": "4.7.0",
+    "author": {
+        "name": "Ebba Rovig",
+        "email": "N/A"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": [],
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": []
+}
